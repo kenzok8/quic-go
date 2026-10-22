@@ -1,6 +1,6 @@
 module github.com/olicesx/quic-go
 
-go 1.24
+go 1.26.10
 
 require (
 	github.com/francoispqt/gojay v1.2.13
