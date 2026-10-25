@@ -10,13 +10,13 @@ require (
 	github.com/prometheus/client_golang v1.19.1
 	github.com/stretchr/testify v1.9.0
 	go.uber.org/mock v0.5.0
-	golang.org/x/crypto v0.26.0
+	golang.org/x/crypto v0.58.0
 	golang.org/x/exp v0.0.0-20240506185415-9bf2ced13842
-	golang.org/x/net v0.28.0
-	golang.org/x/sync v0.8.0
-	golang.org/x/sys v0.23.0
+	golang.org/x/net v0.61.0
+	golang.org/x/sync v0.24.0
+	golang.org/x/sys v0.49.0
 	golang.org/x/time v0.5.0
-	golang.org/x/tools v0.22.0
+	golang.org/x/tools v0.52.0
 )
 
 require (
@@ -31,8 +31,9 @@ require (
 	github.com/prometheus/client_model v0.5.0 // indirect
 	github.com/prometheus/common v0.48.0 // indirect
 	github.com/prometheus/procfs v0.12.0 // indirect
-	golang.org/x/mod v0.18.0 // indirect
-	golang.org/x/text v0.17.0 // indirect
+	golang.org/x/mod v0.42.0 // indirect
+	golang.org/x/telemetry v0.0.0-20261009151841-97e8ea77aa2a // indirect
+	golang.org/x/text v0.43.0 // indirect
 	google.golang.org/protobuf v1.33.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

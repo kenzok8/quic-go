@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ "ubuntu" ]
-        go: [ "1.24.x", "1.26.x" ]
+        go: [ "1.26.10", "1.26.x" ]
         race: [ false ]
         use32bit: [ false ]
         include:

@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
         with:
-          go-version: "1.24.x"
+          go-version: "1.26.10"
       - name: Check that no non-test files import Ginkgo or Gomega
         run: .github/workflows/no_ginkgo.sh
       - name: Check for //go:build ignore in .go files
@@ -60,13 +60,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        go: [ "1.24.x", "1.26.x" ]
+        go: [ "1.26.10", "1.26.x" ]
     env:
       GOLANGCI_LINT_VERSION: v2.11.4
       # golangci-lint v2.11.4 requires Go >= 1.25.0 to build (its own go.mod).
-      # setup-go only leaves the toolchain free to switch while it doesn't
-      # export GOTOOLCHAIN=local; pinning it here keeps the 1.24 leg from
-      # failing on a property of the tool instead of on this repository.
+      # Keep toolchain switching enabled so setup-go patch releases below the
+      # module floor can still honor go.mod while installing the linter.
       GOTOOLCHAIN: auto
     name: golangci-lint (Go ${{ matrix.go }})
     steps:
